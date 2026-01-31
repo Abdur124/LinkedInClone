@@ -1,0 +1,15 @@
+# IDE
+.idea/
+*.iml
+
+# Build / output
+out/
+target/
+
+# Backup folders
+chat-service-backup/
+
+# Maven wrapper files if you want to ignore
+.mvn/
+mvnw
+mvnw.cmd
