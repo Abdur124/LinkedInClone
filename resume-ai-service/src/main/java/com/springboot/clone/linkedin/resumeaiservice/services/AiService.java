@@ -15,4 +15,9 @@ public class AiService {
         //return chatClient.prompt().user(prompt).call().content();
         return chatClient.prompt().user(prompt).call().content();
     }
+
+    public String extractKeywords(String prompt) {
+
+        return chatClient.prompt().user(prompt).call().content();
+    }
 }

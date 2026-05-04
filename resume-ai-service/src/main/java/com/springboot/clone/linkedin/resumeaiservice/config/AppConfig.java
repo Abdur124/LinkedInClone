@@ -31,7 +31,15 @@ public class AppConfig {
                     "Handled millions of financial transactions in low-latency systems",
                     "Designed scalable microservices using Kafka and Spring Boot",
                     "Improved system performance by optimizing database queries",
-                    "Built event-driven systems with asynchronous processing"
+                    "Built event-driven systems with asynchronous processing",
+
+                    "Microservices architecture enables scalable distributed systems",
+                    "Redis is used for caching and low latency applications",
+                    "Kafka supports event-driven architecture",
+                    "Spring Boot is used to build REST APIs",
+                    "SQL databases like MySQL and PostgreSQL are used in backend systems",
+                    "Multithreading improves concurrency in Java applications",
+                    "Performance tuning improves system scalability and latency"
             ));
             log.info("Sample data inserted successfully");
         };
@@ -39,11 +47,10 @@ public class AppConfig {
 
     @Bean
     public ChatClient chatClient(ChatClient.Builder builder,
-                                 FunctionToolCallback quantifyTool,
-                                 FunctionToolCallback enhanceTool) {
+                                 ResumeTools resumeTools) {
 
         return builder
-                .defaultToolCallbacks(quantifyTool, enhanceTool)
+                .defaultTools(resumeTools)
                 .build();
     }
 
